@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Synthesis — D7·S2 Marma Points & D8·S2 Medieval Period | culturalmusings.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #1a1208;
+    --parchment:  #f5f0e8;
+    --cream:      #faf7f1;
+    --sienna:     #8b3a10;
+    --gold:       #b8892a;
+    --gold-light: #d4a843;
+    --teal:       #1d5a5e;
+    --teal-light: #2a7a7e;
+    --muted:      #6b5d4f;
+    --border:     #d4c8b0;
+    --established:#1d5a5e;
+    --emerging:   #7a5c1e;
+    --hypothetical:#7a2020;
+    --hl-estab:   #e8f4f5;
+    --hl-emerg:   #f5f0e0;
+    --hl-hypoth:  #f5e8e8;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Crimson Pro', Georgia, serif; background: var(--cream); color: var(--ink); font-size: 18px; line-height: 1.75; }
+
+  .masthead { background: var(--ink); color: var(--parchment); padding: 0.6rem 2rem; display: flex; justify-content: space-between; align-items: center; font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; border-bottom: 2px solid var(--gold); }
+  .masthead a { color: var(--gold-light); text-decoration: none; }
+
+  .hero { background: var(--ink); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 15% 70%, rgba(29,90,94,0.15) 0%, transparent 70%), radial-gradient(ellipse 55% 40% at 85% 25%, rgba(184,137,42,0.12) 0%, transparent 70%); }
+  .hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.2rem; position: relative; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 300; color: var(--parchment); line-height: 1.15; letter-spacing: -0.01em; position: relative; max-width: 860px; margin: 0 auto 1.4rem; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-subtitle { font-family: 'Crimson Pro', serif; font-size: 1.1rem; color: rgba(245,240,232,0.65); max-width: 640px; margin: 0 auto; position: relative; }
+
+  .progress-strip { background: var(--teal); padding: 0.7rem 2rem; display: flex; align-items: center; gap: 2rem; font-family: 'Space Mono', monospace; font-size: 0.68rem; color: rgba(245,240,232,0.85); letter-spacing: 0.06em; flex-wrap: wrap; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; background: var(--gold-light); margin-right: 0.3rem; }
+  .dot.sienna { background: var(--sienna); }
+
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .domain-band { display: flex; align-items: stretch; margin: 3rem 0 0; border-radius: 3px; overflow: hidden; }
+  .domain-band .accent-bar { width: 6px; flex-shrink: 0; }
+  .domain-band.d7 .accent-bar { background: var(--sienna); }
+  .domain-band.d8 .accent-bar { background: var(--teal); }
+  .domain-band .band-body { background: var(--parchment); padding: 1.5rem 2rem; flex: 1; border: 1px solid var(--border); border-left: none; }
+  .domain-tag { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; }
+  .domain-band.d7 .domain-tag { color: var(--sienna); }
+  .domain-band.d8 .domain-tag { color: var(--teal); }
+  .domain-band h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.5rem; }
+  .domain-band .meta-row { font-family: 'Space Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.06em; }
+  .domain-band .meta-row a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+  .article-body { padding: 2rem 0 1rem; }
+  .article-body p { margin-bottom: 1.3rem; text-align: justify; hyphens: auto; }
+  .article-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--ink); margin: 2.2rem 0 0.8rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+  .article-body h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; font-style: italic; color: var(--muted); margin: 1.6rem 0 0.5rem; }
+
+  .pull-quote { border-left: 4px solid var(--gold); margin: 2rem 0; padding: 1.2rem 1.6rem; background: rgba(184,137,42,0.06); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; line-height: 1.55; color: var(--ink); }
+  .pull-quote cite { display: block; margin-top: 0.6rem; font-size: 0.8rem; font-style: normal; font-family: 'Space Mono', monospace; color: var(--muted); letter-spacing: 0.05em; }
+
+  sup.fn { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--sienna); cursor: default; vertical-align: super; }
+
+  /* MARMA BODY MAP — visual representation */
+  .marma-regions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+  .marma-region { background: var(--parchment); border: 1px solid var(--border); border-radius: 3px; padding: 1rem 1.2rem; }
+  .marma-region .region-name { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sienna); margin-bottom: 0.4rem; }
+  .marma-region .region-count { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1; }
+  .marma-region .region-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; line-height: 1.4; }
+
+  .evidence-table { width: 100%; border-collapse: collapse; margin: 1.8rem 0; font-size: 0.88rem; font-family: 'Crimson Pro', serif; }
+  .evidence-table thead tr { background: var(--ink); color: var(--parchment); }
+  .evidence-table thead th { padding: 0.7rem 1rem; text-align: left; font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; }
+  .evidence-table tbody tr { border-bottom: 1px solid var(--border); }
+  .evidence-table tbody tr:nth-child(even) { background: rgba(245,240,232,0.5); }
+  .evidence-table td { padding: 0.65rem 1rem; vertical-align: top; line-height: 1.5; }
+  .badge { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.55rem; border-radius: 2px; font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; white-space: nowrap; }
+  .badge.established { background: var(--hl-estab); color: var(--established); border: 1px solid rgba(29,90,94,0.3); }
+  .badge.emerging    { background: var(--hl-emerg); color: var(--emerging);    border: 1px solid rgba(122,92,30,0.3); }
+  .badge.hypothetical{ background: var(--hl-hypoth); color: var(--hypothetical); border: 1px solid rgba(122,32,32,0.3); }
+  .badge::before { content: '●'; font-size: 0.55rem; }
+
+  .open-questions { margin: 2.5rem 0; background: var(--parchment); border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+  .open-questions-header { background: var(--ink); color: var(--parchment); padding: 0.7rem 1.3rem; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; }
+  .oq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .oq-col { padding: 1.3rem; }
+  .oq-col:first-child { border-right: 1px solid var(--border); }
+  .oq-col h5 { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.8rem; }
+  .oq-col.known h5 { color: var(--teal); }
+  .oq-col.open h5  { color: var(--sienna); }
+  .oq-col ul { list-style: none; padding: 0; }
+  .oq-col ul li { font-size: 0.88rem; line-height: 1.5; padding: 0.35rem 0 0.35rem 1rem; border-bottom: 1px dotted var(--border); position: relative; }
+  .oq-col ul li::before { position: absolute; left: 0; font-size: 0.6rem; top: 0.55rem; }
+  .oq-col.known ul li::before { content: '✓'; color: var(--teal); }
+  .oq-col.open ul li::before  { content: '?'; color: var(--sienna); font-weight: 700; }
+
+  .unanswered-callout { margin: 2rem 0; padding: 1.4rem 1.8rem; background: rgba(139,58,16,0.06); border: 1px solid rgba(139,58,16,0.25); border-left: 5px solid var(--sienna); border-radius: 0 3px 3px 0; }
+  .unanswered-callout .callout-label { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sienna); margin-bottom: 0.5rem; }
+  .unanswered-callout p { margin-bottom: 0.6rem; font-size: 0.92rem; }
+  .unanswered-callout p:last-child { margin-bottom: 0; }
+
+  /* AGAMIC CORPUS TABLE */
+  .agama-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+  .agama-card { border-radius: 3px; padding: 1.2rem; overflow: hidden; }
+  .agama-card.shaiva { background: rgba(139,58,16,0.07); border: 1px solid rgba(139,58,16,0.2); }
+  .agama-card.vaishnava { background: rgba(29,90,94,0.07); border: 1px solid rgba(29,90,94,0.2); }
+  .agama-card.shakta { background: rgba(184,137,42,0.07); border: 1px solid rgba(184,137,42,0.25); }
+  .agama-card .tradition { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .agama-card.shaiva .tradition { color: var(--sienna); }
+  .agama-card.vaishnava .tradition { color: var(--teal); }
+  .agama-card.shakta .tradition { color: var(--gold); }
+  .agama-card .count { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 700; line-height: 1; margin: 0.3rem 0; }
+  .agama-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.45; margin: 0; }
+
+  /* BHAKTI SAINTS TIMELINE */
+  .saints-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+  .saint-card { background: var(--parchment); border: 1px solid var(--border); border-radius: 3px; padding: 1rem 1.2rem; }
+  .saint-card .saint-era { font-family: 'Space Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; color: var(--teal); text-transform: uppercase; }
+  .saint-card .saint-name { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; margin: 0.2rem 0 0.3rem; }
+  .saint-card p { font-size: 0.85rem; color: var(--muted); margin: 0; line-height: 1.45; }
+
+  .footnotes-section { margin-top: 3rem; padding-top: 1.5rem; border-top: 2px solid var(--border); }
+  .footnotes-section h3 { font-family: 'Space Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; border: none; padding: 0; }
+  .footnotes-list { list-style: none; padding: 0; font-size: 0.8rem; line-height: 1.55; color: var(--muted); }
+  .footnotes-list li { padding: 0.3rem 0 0.3rem 1.8rem; position: relative; border-bottom: 1px dotted var(--border); }
+  .footnotes-list li .fn-num { position: absolute; left: 0; font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--sienna); top: 0.38rem; }
+  .footnotes-list a { color: var(--teal); word-break: break-all; }
+
+  .divider { display: flex; align-items: center; gap: 1rem; margin: 4rem 0; color: var(--gold); }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .divider-symbol { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); }
+
+  .ref-urls { background: var(--parchment); border: 1px solid var(--border); border-radius: 3px; padding: 1.2rem 1.5rem; margin: 2rem 0; }
+  .ref-urls .ref-label { font-family: 'Space Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
+  .ref-urls a { display: block; font-size: 0.82rem; color: var(--teal); text-decoration: none; padding: 0.2rem 0; border-bottom: 1px dotted var(--border); word-break: break-all; }
+  .ref-urls a:last-child { border: none; }
+
+  footer { background: var(--ink); color: rgba(245,240,232,0.5); padding: 2.5rem 2rem; text-align: center; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; margin-top: 6rem; }
+  footer a { color: var(--gold-light); text-decoration: none; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--parchment); font-weight: 300; margin-bottom: 0.5rem; }
+
+  @media (max-width: 640px) {
+    .oq-cols, .marma-regions, .agama-grid, .saints-grid { grid-template-columns: 1fr; }
+    .oq-col:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="masthead">
+  <span><a href="https://www.culturalmusings.com">culturalmusings.com</a> / grand-synthesis</span>
+  <span>PHASE 3 · PARALLEL BUILD · D7·S2 & D8·S2</span>
+  <span><a href="https://github.com/ramachandra1975">github.com/ramachandra1975</a></span>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">Grand Synthesis · Second Subdomain Pair</div>
+  <h1>The <em>Hidden Points</em> &amp; the <em>Devotional Revolution</em></h1>
+  <p class="hero-subtitle">Domain 7·S2: Marma Points — 107 Vital Energy Points and Their Acoustic Correlations<br>Domain 8·S2: Medieval Period — Bhakti Movement, Agamic Corpus, Temple Traditions (600–1600 CE)</p>
+</div>
+
+<div class="progress-strip">
+  <span><span class="dot sienna"></span> D7·S2 — Marma Points: In Progress</span>
+  <span><span class="dot"></span> D8·S2 — Medieval Period: In Progress</span>
+  <span>Pair 2 of 6 · Phase 3</span>
+  <span>Building on D7·S1 &amp; D8·S1 (Completed)</span>
+</div>
+
+<div class="page-wrap">
+
+  <!-- ════════════ DOMAIN 7 · S2 ════════════ -->
+  <div class="domain-band d7">
+    <div class="accent-bar"></div>
+    <div class="band-body">
+      <div class="domain-tag">Domain 7 of 9 · Subdomain 2 of 6 · Medical &amp; Bio-Resonance Interface</div>
+      <h2>Marma Points<br><span style="font-weight:300; font-size:1.1rem;">The 107 Vital Energy Points: Anatomy, Prana Architecture, and Acoustic Correlations</span></h2>
+      <div class="meta-row">
+        Primary URL: <a href="https://bioresonancemusings.culturalmusings.com">bioresonancemusings.culturalmusings.com</a> &nbsp;|&nbsp;
+        Cross-ref: D7·S1 (Nada Chikitsa) · D4 (Sound &amp; Vibration) &nbsp;|&nbsp;
+        Timeline: Weeks 16–24 · Phase 3
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <h3>I. Definitional and Textual Origins</h3>
+
+    <p>
+      The word <em>marma</em> derives from the Sanskrit root <em>mṛ</em>, meaning death or injury — a nomenclature that carries both the system's clinical precision and its ancient military origins. <em>Marmani</em> (the plural) are sites where, in the words of Sushruta, "life resides" — and where, consequently, any trauma of sufficient force could end it.<sup class="fn">[1]</sup> The earliest systematic description of Marma points appears in the <em>Sushruta Samhita</em> (c. 600 BCE), the great Ayurvedic surgical compendium attributed to the physician Sushruta, who declared that knowledge of the 107 Marma points constituted half the science of surgery.
+    </p>
+    <p>
+      The Sushruta Samhita defines each Marma point as a site of anatomical confluence — a junction where muscles (māṃsa), blood vessels (sirā), ligaments (snāyu), bones (asthi), and joints (sandhi) converge in such a way that Prana (vital life-force) concentrates and circulates through the Nadi network.<sup class="fn">[2]</sup> This is not abstract metaphysics: Sushruta's Marma points are anatomically identifiable, and a 2026 review article in the SAGE journal <em>Integrative Medicine International</em> confirms that modern anatomical analysis locates the majority of classical Marma sites at positions that correlate with major neural plexuses, neurovascular bundles, and arterial convergences.<sup class="fn">[3]</sup>
+    </p>
+
+    <div class="pull-quote">
+      "Marma points represent in Ayurveda what acupuncture points represent in Traditional Chinese Medicine. Although there are similarities between the marma points and acupoints, both are thought to have evolved independently with their own cultural influences."
+      <cite>— Hirekatur, Durve, Dhruva: Introduction to Ayurvedic Marma Therapy, SAGE Integrative Medicine International, 2026</cite>
+    </div>
+
+    <h3>II. The 107: Classification by Body Region</h3>
+    <p>
+      The Sushruta Samhita classifies the 107 primary Marma points by anatomical region. A 108th point is recognised in some traditions as the mind itself — making the full mapping simultaneously physical and meta-physical. Each point is further categorised by the type of tissue that predominates at its site (māṃsa-marma, sirā-marma, snāyu-marma, asthi-marma, or sandhi-marma) and by its size, ranging from the Atimatra (covering four or more finger-widths) down to the Alpa-marma (under two).
+    </p>
+
+    <div class="marma-regions">
+      <div class="marma-region">
+        <div class="region-name">Head &amp; Neck</div>
+        <div class="region-count">37</div>
+        <div class="region-note">Highest density. The head is the classical seat of Prana. Includes Adhipati (crown), Sthapani (third eye), Phana (nasal sides).</div>
+      </div>
+      <div class="marma-region">
+        <div class="region-name">Upper Limbs</div>
+        <div class="region-count">22</div>
+        <div class="region-note">Concentrated at major joints — shoulders, elbows, wrists. Directly engaged in Abhyanga (oil massage) practice.</div>
+      </div>
+      <div class="marma-region">
+        <div class="region-name">Lower Limbs</div>
+        <div class="region-count">22</div>
+        <div class="region-note">Includes Kshipra (between thumb and index toe), Talhridaya (sole centre). Engaged in Padabhyanga (foot massage).</div>
+      </div>
+      <div class="marma-region">
+        <div class="region-name">Trunk (Chest &amp; Abdomen)</div>
+        <div class="region-count">12</div>
+        <div class="region-note">Includes Hridaya (heart), Nabhi (navel), Basti (lower abdomen). Three major vital centres in Ayurvedic cosmology.</div>
+      </div>
+      <div class="marma-region">
+        <div class="region-name">Dorsal (Back)</div>
+        <div class="region-count">14</div>
+        <div class="region-note">Points along the spinal column and posterior thorax. Engaged in Kati Basti (lumbar treatments) and spinal Marma therapy.</div>
+      </div>
+      <div class="marma-region">
+        <div class="region-name">Total (+ Mind)</div>
+        <div class="region-count">107 + 1</div>
+        <div class="region-note">The 108th point is Manas — the mind itself. "One could say the skin itself is the 108th marma, linking all the others together." (Frawley)</div>
+      </div>
+    </div>
+
+    <h3>III. Marma and the Warrior Tradition — Kalaripayattu</h3>
+    <p>
+      The Marma system's non-medical origins are as important as its therapeutic applications. Marma therapy originated alongside <em>Kalaripayattu</em>, India's ancient martial art from Kerala — one of the oldest codified fighting systems in the world. Kalari warriors were trained simultaneously in combat and in Ayurveda: they used Marma knowledge both to strike opponents with lethal or paralyzing precision, and to revive fallen comrades through rapid point stimulation.<sup class="fn">[4]</sup> The same anatomical map that made warriors lethal made physicians effective. This dual origin — military precision fused with healing intention — is characteristic of many ancient Indian medical systems and distinguishes them fundamentally from systems that developed purely within a therapeutic context.
+    </p>
+
+    <h3>IV. The Acoustic Correlation Question — Where the Synthesis Lives</h3>
+    <p>
+      The central claim of this subdomain within the Grand Synthesis is that the 107 Marma points have acoustic correlations — that specific sound frequencies, including specific ragas, mantras, and binaural frequencies, interact measurably with the Prana activity at Marma sites. This is the bridge between Domain 7 (Medical &amp; Bio-Resonance) and Domain 4 (Sound &amp; Vibration), and it is where the most interesting and most open research territory exists.
+    </p>
+    <p>
+      The theoretical basis for Marma–sound correlation rests on three pillars. First, within the Nadi system, the 72,000 energy channels of the subtle body have their physical substrate in the nervous system — and acoustic stimulation of the nervous system is increasingly well-documented. Second, the seven Chakras (energy centres) that correlate with the major Marma plexuses are each assigned seed-syllables (bija mantras) in the classical literature — suggesting a sound–energy point correspondence that predates modern neurology by millennia.<sup class="fn">[5]</sup> Third, the application of specific tuning-fork frequencies to Marma points is a current area of integrative medical practice, though its clinical evidence base remains at the emerging stage.
+    </p>
+
+    <h3>V. Marma and Chinese Acupuncture — The Cross-Cultural Evidence</h3>
+    <p>
+      A peer-reviewed comparative study published in PMC (2023) examined the structural parallels between Ayurvedic Marma points and Traditional Chinese Medicine acupoints — a comparison that the Chinese scholar Liao Yuqun had initiated by characterising Marma points as "the acupoints of India."<sup class="fn">[6]</sup> The analysis found significant anatomical correspondence between several major Marma sites and acupuncture points, particularly along what Chinese medicine identifies as the governing and conception vessels. Both systems describe approximately the same density of high-significance points along the head, neck, and spine; both identify the umbilicus (Nabhi Marma / Shen Que CV-8) as a major vital centre; both locate a critical point between the eyebrows (Sthapani Marma / Yintang EX-HN3).
+    </p>
+    <p>
+      Critically, the comparative study concludes that these two systems appear to have developed independently — convergent evolution of medical knowledge rather than transmission. If this is confirmed, it raises a profound question: are there universal anatomical patterns of neural significance that multiple ancient medical traditions independently discovered? This would suggest that the Marma map is not arbitrary cultural construction but is tracking genuine neuroanatomical reality.
+    </p>
+
+    <h3>VI. Evidence Assessment — Traffic-Light Framework</h3>
+
+    <table class="evidence-table">
+      <thead>
+        <tr>
+          <th>Claim / Mechanism</th>
+          <th>Evidence Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Most classical Marma points correspond to anatomically identifiable neurovascular sites</td>
+          <td><span class="badge established">Established</span></td>
+          <td>SAGE Integrative Medicine International (2026): Sushruta's descriptions correlate with neural plexuses and arterial convergences in modern anatomy<sup class="fn">[3]</sup></td>
+        </tr>
+        <tr>
+          <td>Marma points are structurally parallel to TCM acupuncture points (independent evolution)</td>
+          <td><span class="badge established">Established</span></td>
+          <td>PMC comparative study (2023): significant anatomical correspondence confirmed; independent development probable<sup class="fn">[6]</sup></td>
+        </tr>
+        <tr>
+          <td>Marma point stimulation (touch/pressure) produces measurable physiological changes</td>
+          <td><span class="badge emerging">Emerging</span></td>
+          <td>Analogous to well-documented acupuncture physiology; direct Marma-specific RCTs remain limited; evidence base growing through Ayurvedic massage (Abhyanga) research</td>
+        </tr>
+        <tr>
+          <td>Specific sound frequencies applied to Marma sites produce differential therapeutic effects</td>
+          <td><span class="badge emerging">Emerging</span></td>
+          <td>Tuning-fork therapy at energy points is in clinical use; systematic Marma-acoustic RCT data not yet available; mechanism plausible through neural entrainment</td>
+        </tr>
+        <tr>
+          <td>Bija mantra chanting activates specific Chakra-Marma regions measurably</td>
+          <td><span class="badge emerging">Emerging</span></td>
+          <td>fMRI studies on mantra chanting show distinct neural activation patterns; specific Chakra-Marma correlation with specific bija mantras not yet independently mapped</td>
+        </tr>
+        <tr>
+          <td>The Nadi network (72,000 subtle channels) has a complete physical substrate in the nervous system</td>
+          <td><span class="badge hypothetical">Hypothetical</span></td>
+          <td>Partial anatomical correspondence established; the full Nadi map exceeds identifiable neural pathways; subtle body framework requires a different category of investigation</td>
+        </tr>
+        <tr>
+          <td>Marma trauma at specific points produces the classical fatality patterns described by Sushruta</td>
+          <td><span class="badge hypothetical">Hypothetical</span></td>
+          <td>Plausible for neurovascular Marmas; not systematically verified in modern forensic medicine; raises ethical barriers to direct investigation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="open-questions">
+      <div class="open-questions-header">KNOWN vs OPEN QUESTIONS · D7-S2 · MARMA POINTS</div>
+      <div class="oq-cols">
+        <div class="oq-col known">
+          <h5>What Is Currently Known</h5>
+          <ul>
+            <li>107 Marma points are anatomically identifiable — their locations correlate with neurovascular structures in modern anatomy</li>
+            <li>The Sushruta Samhita (c. 600 BCE) is the primary textual source; the system is also documented in the Ashtanga Hridayam</li>
+            <li>Marma points parallel TCM acupuncture points in anatomical location — probable independent evolution of convergent knowledge</li>
+            <li>The 108th Marma (Manas) situates the mind as the highest vital point — integrating psychology into the anatomical map</li>
+            <li>The Kalaripayattu connection establishes dual military/therapeutic origins — the oldest surviving Marma application lineage</li>
+          </ul>
+        </div>
+        <div class="oq-col open">
+          <h5>What Remains Unanswered</h5>
+          <ul>
+            <li>Do specific acoustic frequencies (Hz) interact measurably and differentially with specific Marma sites — or is the claimed Marma-sound correlation a theoretical overlay without independent effect?</li>
+            <li>Can the full Nadi network be mapped onto nervous system anatomy, or does it require a different category of physical investigation?</li>
+            <li>What is the clinical efficacy of Marma therapy for specific conditions — do controlled trials support outcomes beyond placebo?</li>
+            <li>Which of the classical 107 Marma locations have the highest correspondence with acupuncture points — and what does this distribution pattern reveal about shared anatomical knowledge?</li>
+            <li>Are there additional Marma points beyond the classical 107 that individual constitution (prakriti) generates? How should individual variation be incorporated into the system?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="unanswered-callout">
+      <div class="callout-label">⚑ Deepest Unanswered Question — D7-S2</div>
+      <p>The most consequential open question in the Marma system is whether the acoustic correlations — the assignment of specific sound frequencies and bija mantras to specific Marma points — represent a genuine biophysical mechanism, or a theoretical synthesis that, while internally consistent within the classical framework, has no separable causal effect from general sound therapy. If Marma-specific acoustic protocols can be shown in controlled trials to produce outcomes that general sound therapy at non-Marma points does not, then the classical map is tracking a real anatomical and energetic phenomenon. If not, the Marma-acoustic connection remains a philosophical bridge — significant intellectually but not clinically actionable. This is the specific experimental gap that Domain 4 (Sound &amp; Vibration) and Domain 7 need to close together.</p>
+    </div>
+
+    <div class="ref-urls">
+      <div class="ref-label">Key External References — D7-S2</div>
+      <a href="https://journals.sagepub.com/doi/10.1177/27683192251408985">SAGE Integrative Medicine International (2026) — Introduction to Ayurvedic Marma Therapy</a>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10382659/">PMC10382659 — Comparative Study on Marma and Acupoints (TCM), 2023</a>
+      <a href="https://artofvedas.com/pages/marma-points-ayurvedic-vital-energy-guide">artofvedas.com — Marma Points: Vital Energy Points in Ayurveda</a>
+      <a href="https://theayurvedicclinic.com/discovering-the-power-of-marma-points/">theayurvedicclinic.com — Discovering the Power of Marma Points</a>
+      <a href="https://ayurveda.com/ayurvedic-press/marma-points-of-ayurveda/">ayurveda.com — Vasant Lad: Marma Points of Ayurveda</a>
+      <a href="https://www.keralaayurveda.us/courses/blog/marma-101-the-oldest-touch-therapy-for-energy-healing/">keralaayurveda.us — Marma 101: Origins in Kalaripayattu</a>
+      <a href="https://www.wisdomlib.org/">wisdomlib.org — Sushruta Samhita Marma sections</a>
+    </div>
+
+    <div class="footnotes-section">
+      <h3>Scholarly Footnotes — D7-S2</h3>
+      <ol class="footnotes-list">
+        <li><span class="fn-num">[1]</span> Art of Vedas: "Marma Points: Vital Energy Points in Ayurveda" — <a href="https://artofvedas.com/pages/marma-points-ayurvedic-vital-energy-guide">artofvedas.com</a>. The dual clinical/military etymology of <em>marma</em> is discussed in Frawley's Ayurveda and Marma Therapy.</li>
+        <li><span class="fn-num">[2]</span> Sushruta Samhita definition of Marma: sites of five-tissue confluence. See also Ashtanga Hridayam (Vagbhata). Both texts enumerate 107 primary points.</li>
+        <li><span class="fn-num">[3]</span> Hirekatur, Durve, Dhruva (2026): "An Introduction to Ayurvedic Marma Therapy." <em>Integrative Medicine International</em>. SAGE. <a href="https://journals.sagepub.com/doi/10.1177/27683192251408985">doi:10.1177/27683192251408985</a></li>
+        <li><span class="fn-num">[4]</span> Kerala Ayurveda: "Marma 101: The Oldest Touch Therapy" — <a href="https://www.keralaayurveda.us/courses/blog/marma-101-the-oldest-touch-therapy-for-energy-healing/">keralaayurveda.us</a>. The Kalari-Marma lineage is the oldest surviving practical transmission of the Marma system.</li>
+        <li><span class="fn-num">[5]</span> Aithein Healing: "108 Marma Points Chart" — <a href="https://www.aitheinhealing.com/108-marma-points-chart-a-complete-breakdown/">aitheinhealing.com</a>. On bija mantra–Chakra–Marma correspondences.</li>
+        <li><span class="fn-num">[6]</span> "A Comparative Study on Marma and Acupoints." PMC10382659. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10382659/">ncbi.nlm.nih.gov/pmc/articles/PMC10382659</a></li>
+      </ol>
+    </div>
+
+  </div><!-- /article-body d7s2 -->
+
+  <div class="divider"><span class="divider-symbol">॥</span></div>
+
+  <!-- ════════════ DOMAIN 8 · S2 ════════════ -->
+  <div class="domain-band d8">
+    <div class="accent-bar"></div>
+    <div class="band-body">
+      <div class="domain-tag">Domain 8 of 9 · Subdomain 2 of 6 · Cultural Heritage Continuum</div>
+      <h2>The Medieval Period<br><span style="font-weight:300; font-size:1.1rem;">Bhakti Movement · Agamic Corpus · Temple Traditions · 600–1600 CE</span></h2>
+      <div class="meta-row">
+        Primary URL: <a href="https://www.culturalmusings.com">culturalmusings.com</a> &nbsp;|&nbsp;
+        External: <a href="https://vedicheritage.gov.in">vedicheritage.gov.in</a> · <a href="https://mahakota.com">mahakota.com</a> &nbsp;|&nbsp;
+        Timeline: Weeks 18–26 · Phase 3
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <h3>I. The Medieval Period in Context — What "Medieval" Means in Indian History</h3>
+    <p>
+      The conventional periodisation of Indian history into Ancient, Medieval, and Modern — borrowed from European historiography — maps imperfectly onto the subcontinent's internal logic of cultural development. In Indian terms, the "medieval" period (broadly 600–1600 CE) is not a dark age or a period of stagnation but rather one of the most explosively creative eras in world cultural history: the era of the great temple traditions, the Bhakti movement, the Agamic corpus, the Natya Shastra's practical realisation in stone and performance, and the synthesis of Sanskrit and vernacular literary cultures across twelve regional languages simultaneously.<sup class="fn">[7]</sup>
+    </p>
+    <p>
+      The period is anchored at one end by the post-Gupta fragmentation (c. 600 CE) and the rise of the regional kingdoms — Pallavas, Chalukyas, Rashtrakutas, Cholas in the south; the Gurjara-Pratiharas, Palas, and later the Rajput confederacies in the north — and at the other end by the consolidation of the Mughal empire under Akbar (c. 1556 CE). Between these poles, the subcontinent underwent a transformation in how it organised, expressed, and transmitted its philosophical and cultural inheritance.
+    </p>
+
+    <h3>II. The Agamic Corpus — The Temple Science</h3>
+    <p>
+      No feature of the medieval period is more significant for the Grand Synthesis project than the Agamas — the vast body of post-Vedic scriptures that provided the complete operational framework for temple civilisation. The Agamas are not peripheral to the Vedic tradition; they are its practical extension into architecture, iconography, ritual science, meditation, mantra, and community life. The term <em>āgama</em> itself means "that which has come down" — emphasising transmission as the source of authority.<sup class="fn">[8]</sup>
+    </p>
+
+    <div class="agama-grid">
+      <div class="agama-card shaiva">
+        <div class="tradition">Shaiva Agamas</div>
+        <div class="count">28</div>
+        <p>Primary Agamas + 207 Upagamas. Cover the worship of Shiva, temple construction, tantric practice, and the philosophy of Shaiva Siddhanta. Dialogue form: Shiva and Parvati. Branches: Sanskrit Shaiva Siddhanta, Tamil Shaivas, Kashmir Shaivas (Trika), Lingayats (Virashaiva).</p>
+      </div>
+      <div class="agama-card vaishnava">
+        <div class="tradition">Vaishnava Agamas</div>
+        <div class="count">108+</div>
+        <p>108 Pancharatra Samhitas + 25 Vaikhanasa Agamas. Provide the complete framework for Vishnu worship, temple iconography, and the theological basis of Sri Vaishnavism. Consolidated under Ramanuja's philosophical umbrella (12th c.).</p>
+      </div>
+      <div class="agama-card shakta">
+        <div class="tradition">Shakta Agamas / Tantras</div>
+        <div class="count">64 + 77</div>
+        <p>64 primary Shakta Agamas (Tantras) and 77 Shakta secondary texts. Focus on the worship of the Divine Feminine (Devi, Shakti). Incorporate yantra science, Kundalini yoga, the Sri Vidya tradition. Connect directly to Domain 1 (Sacred Geometry).</p>
+      </div>
+    </div>
+
+    <p>
+      Each Agama is structured around a fourfold architecture: <em>jñāna</em> (metaphysics and theology), <em>yoga</em> (meditative disciplines), <em>kriyā</em> (ritual procedures, mantra, yantra, mudrā), and <em>caryā</em> (conduct, vows, and temple duties). This internal structure makes each Agama, in the words of a 2026 scholarly analysis, "a complete temple science — connecting ontology, contemplative methods, ritual craftsmanship, and community-facing service in a single integrated vision."<sup class="fn">[9]</sup>
+    </p>
+    <p>
+      The origin and exact chronology of the Agamas remains one of the most contested questions in Indian textual scholarship. The texts claim divine revelation — they present themselves as conversations between Shiva and Parvati, or as transmissions from Vishnu — and resist conventional historical dating. What scholars agree on is that the primary Agamic literature took its current form between approximately the 5th and 12th centuries CE, and that the great Chola and Pallava temple-building programmes of South India were directly guided by Agamic prescriptions for architecture, iconography, and ritual installation.
+    </p>
+
+    <h3>III. The Bhakti Movement — A Social and Spiritual Earthquake</h3>
+    <p>
+      The Bhakti movement represents the most profound social and religious transformation of the medieval period — a democratisation of spiritual access that challenged the brahminical monopoly on religious authority by insisting that direct, personal, emotionally immediate devotion to a personal god was not only sufficient for liberation but superior to ritual correctness. Its first articulated expressions appeared in Tamil Nadu in the 7th century CE, through the Alvars (Vaishnava poet-saints, twelve in the classical tradition) and the Nayanars (Shaiva poet-saints, sixty-three in number), who composed in Tamil vernacular — not Sanskrit — and sang to the gods in the register of human love.<sup class="fn">[10]</sup>
+    </p>
+    <p>
+      What makes the Bhakti movement extraordinary as a cultural phenomenon is its simultaneous operation on multiple registers: it was a theological challenge to ritualism, a social challenge to caste exclusion, a linguistic revolution (producing the first major vernacular literary traditions across Hindi, Marathi, Bengali, Kannada, and Tamil), and a musical revolution that generated the raga devotional repertoire that is still performed in concert halls and temples across India today. The Bhakti saints created the first truly democratic cultural form in Indian history — devotional poetry that any illiterate farmer could hear, understand, and find transformative.
+    </p>
+
+    <h4>Key Figures of the Bhakti Tradition</h4>
+    <div class="saints-grid">
+      <div class="saint-card">
+        <div class="saint-era">7th–9th c. CE · Tamil Nadu</div>
+        <div class="saint-name">The Alvars &amp; Nayanars</div>
+        <p>Twelve Vaishnava Alvars and sixty-three Shaiva Nayanars created the Tamil devotional corpus (Divya Prabandham, Tevaram). Their poetry was formally integrated into temple liturgy under the Cholas, establishing the template for bhakti's institutional absorption.</p>
+      </div>
+      <div class="saint-card">
+        <div class="saint-era">11th–12th c. CE · Tamil Nadu</div>
+        <div class="saint-name">Ramanuja (1017–1137 CE)</div>
+        <p>Theologian of Vishishtadvaita (qualified non-dualism). Synthesised Tamil Bhakti with Sanskrit Vedantic philosophy; provided the intellectual scaffolding for Sri Vaishnavism. His acceptance of devotees across caste lines was a direct social challenge with permanent institutional consequences.</p>
+      </div>
+      <div class="saint-card">
+        <div class="saint-era">12th c. CE · Karnataka</div>
+        <div class="saint-name">Basavanna (c. 1105–1167 CE)</div>
+        <p>Founder of the Lingayat/Virashaiva movement. His <em>vachana</em> literature — free-form devotional prose-poetry in Kannada — constituted one of the most radical anti-caste, anti-ritualist movements in Indian history. Kudalasangama temple remains the movement's sacred centre.</p>
+      </div>
+      <div class="saint-card">
+        <div class="saint-era">13th–17th c. CE · Maharashtra, North</div>
+        <div class="saint-name">Sant Tradition: Kabir, Mirabai, Tukaram, Tulsidas</div>
+        <p>North Indian Bhakti saints operated in the context of Islamic presence. Kabir's nirgun bhakti (devotion to the formless) created a syncretic theology that absorbed Sufi elements. Mirabai's poetry to Krishna became one of India's most beloved literary traditions. Tulsidas' Ramcharitmanas democratised the Ramayana in Awadhi Hindi.</p>
+      </div>
+    </div>
+
+    <h3>IV. The Temple Tradition — Agamas Made Visible in Stone</h3>
+    <p>
+      The great temple-building programme of medieval South India — the Pallava rock-cut temples at Mahabalipuram (7th c.), the Chola temples at Thanjavur and Gangaikondacholapuram (11th c.), the Hoysala temples of Karnataka (12th–13th c.) — represents the Agamic vision made material. Temple architecture in this tradition is not primarily aesthetic: it is a precise cosmological diagram. The <em>garbhagriha</em> (sanctum sanctorum) is the bindu — the point of divine presence. The <em>vimana</em> (tower) above it is Mount Meru, the cosmic axis. The <em>pradakshina</em> path is the circumambulation of the cosmos. Every measurement, every iconographic programme, every material specification is prescribed in the Agamic texts.<sup class="fn">[11]</sup>
+    </p>
+    <p>
+      It is here that the Grand Synthesis's Domain 2 (Natya Shastra) and Domain 8 (Cultural Heritage) intersect most dramatically. The 108 Karanas of Natya Shastra — the body positions that constitute the DNA of Indian classical dance — are literally carved onto the outer walls of these medieval temples. The Nataraja (Shiva as cosmic dancer) sculptures of the Chola period are among the most sophisticated syntheses of theology, physics, and aesthetics in any tradition. The Brihadeeswara temple at Thanjavur (1010 CE) contains sculptures that are precisely dated to specific Karanas in Bharata's taxonomy.
+    </p>
+
+    <h3>V. The Islamic Period and Bhakti's Response</h3>
+    <p>
+      The period from 1200 CE onward introduced a new variable into Indian cultural life: widespread Islamic political authority across northern and central India, and the destruction of numerous temple complexes and their associated knowledge institutions. The Bhakti movement's intensification during this period — the explosion of vernacular devotional poetry from the 12th to 17th centuries — was in part a response to this disruption: a form of cultural preservation and renewal that required no temples, no Sanskrit, no brahminical intermediaries, and was therefore largely immune to institutional destruction.<sup class="fn">[12]</sup>
+    </p>
+    <p>
+      The interaction between Sufi mysticism and Bhakti devotionalism during this period produced some of the most remarkable syncretic cultural forms in world history — the music of Amir Khusrau, the poetry of Kabir, the shared shrines where Hindu and Muslim devotees worshipped together. This syncretism is a cultural fact of immense significance that mainstream historiography has often either over-romanticised or under-examined.
+    </p>
+
+    <h3>VI. Evidence and Interpretive Status</h3>
+
+    <table class="evidence-table">
+      <thead>
+        <tr>
+          <th>Historical / Cultural Claim</th>
+          <th>Evidential Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The Tamil Bhakti movement began in the 7th century CE with the Alvars and Nayanars</td>
+          <td><span class="badge established">Established</span></td>
+          <td>Well-documented through the Divya Prabandham and Tevaram anthologies; Chola institutional adoption is epigraphically confirmed</td>
+        </tr>
+        <tr>
+          <td>Chola temple architecture was directly prescribed by Agamic texts</td>
+          <td><span class="badge established">Established</span></td>
+          <td>Art-historical and epigraphic evidence confirms Agamic prescriptions governed Chola temple programmes; UNESCO World Heritage status for Brihadeeswarar temple</td>
+        </tr>
+        <tr>
+          <td>The Agamic corpus (Shaiva, Vaishnava, Shakta) comprises a complete temple science with cosmological, ritual, and architectural specifications</td>
+          <td><span class="badge established">Established</span></td>
+          <td>28 Shaiva + 108 Vaishnava Pancharatra + 64 Shakta texts; fourfold structure (jñāna, yoga, kriyā, caryā) confirmed in textual scholarship<sup class="fn">[9]</sup></td>
+        </tr>
+        <tr>
+          <td>Bhakti movement challenged caste hierarchy and operated as a vehicle for social reform</td>
+          <td><span class="badge emerging">Emerging</span></td>
+          <td>Extensively argued in historiography; however, debate continues over whether Bhakti challenged or ultimately reinforced caste in social practice</td>
+        </tr>
+        <tr>
+          <td>How many Agamic texts have been lost — and what do the lost texts contain?</td>
+          <td><span class="badge hypothetical">Hypothetical</span></td>
+          <td>Of the 28 primary Shaiva Agamas, several are known only by title; an unknown number of Upagamas are entirely lost. The scale of the loss cannot currently be estimated</td>
+        </tr>
+        <tr>
+          <td>The 108 Karanas of Natya Shastra are completely and accurately represented in surviving Chola temple sculpture</td>
+          <td><span class="badge emerging">Emerging</span></td>
+          <td>Active research area; the Brihadeeswarar temple sculptural programme matches a substantial number of Karana descriptions but a full 108-to-sculpture correspondence has not been definitively established</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="open-questions">
+      <div class="open-questions-header">KNOWN vs OPEN QUESTIONS · D8-S2 · MEDIEVAL PERIOD</div>
+      <div class="oq-cols">
+        <div class="oq-col known">
+          <h5>What Is Currently Known</h5>
+          <ul>
+            <li>The Bhakti movement began in South India in the 7th c. CE and spread northward over the following millennium, generating devotional literature in twelve major Indian languages</li>
+            <li>The Agamic corpus provides a complete, internally coherent system for temple architecture, iconography, ritual, and philosophy across three major traditions</li>
+            <li>The Chola temple-building programme (10th–13th c.) is one of the greatest architectural achievements in world history — directly governed by Agamic prescription</li>
+            <li>The 108 Karanas of Natya Shastra are depicted on the outer walls of the Brihadeeswarar temple at Thanjavur (1010 CE)</li>
+            <li>The Islamic period produced significant temple destruction but also generated syncretic cultural forms (Sufi-Bhakti interaction) of enduring significance</li>
+          </ul>
+        </div>
+        <div class="oq-col open">
+          <h5>What Remains Unanswered</h5>
+          <ul>
+            <li>How many Agamic texts are lost — and is their recovery possible from fragmentary citations in surviving texts?</li>
+            <li>Did the Bhakti movement produce genuine, lasting social change in caste practice, or did its social radicalism remain primarily literary and spiritual?</li>
+            <li>What is the full scope of knowledge destroyed in the temple destructions of the 12th–16th centuries — specifically, what ritual, musical, and dance knowledge was transmitted only orally and was severed from its institutional context?</li>
+            <li>How should the Sufi-Bhakti syncretic tradition be classified — as a form of Islam, a form of Hinduism, or as something that genuinely transcends both categories?</li>
+            <li>Are all 108 Karanas of Natya Shastra represented in surviving temple sculpture — and can the sculptural programme be used to reconstruct lost performance techniques?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="unanswered-callout">
+      <div class="callout-label">⚑ Deepest Unanswered Question — D8-S2</div>
+      <p>The deepest unresolved question of the medieval period is the extent of irreversible knowledge loss. The temple destruction campaigns of the 12th–16th centuries did not merely demolish buildings — they severed living institutions in which sacred music, dance, ritual, Agamic transmission, and manuscript preservation were concentrated. The <em>devadasi</em> system (in its pre-colonial form) was one such institutional vehicle; the <em>mathas</em> (monastic centres) another; the temple <em>tiruvasal</em> schools a third. How much of what is now classified as "unanswered" in the Grand Synthesis project is in fact unanswerable — not because the ancients did not know, but because the knowledge was destroyed before it could be written down?</p>
+      <p>This question cannot be answered — by definition. But its honest acknowledgement is essential to the intellectual integrity of the entire synthesis project.</p>
+    </div>
+
+    <div class="ref-urls">
+      <div class="ref-label">Key External References — D8-S2</div>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5165893">SSRN — Koul: Sacred Texts and Spiritual Pathways: Shaiva, Vaishnava, Shakta Agamas (2025)</a>
+      <a href="https://blog.dharma-renaissance.org/scriptures/agamas-in-hinduism-a-definitive-guide-to-temple-science-across-shaiva-vaishnava-shakta-paths/">dharma-renaissance.org — Agamas: A Definitive Guide to Temple Science</a>
+      <a href="https://www.britannica.com/print/article/8697">Britannica — Agama in Hinduism</a>
+      <a href="http://www.sahapedia.org/the-dynamics-of-bhakti">Sahapedia — The Dynamics of Bhakti</a>
+      <a href="https://www.academia.edu/88040398">Academia.edu — Bhakti Movement in Early Medieval South India: A Historiographical Study</a>
+      <a href="https://byjus.com/free-ias-prep/bhakti-movement-ncert-notes/">BYJU's NCERT — Bhakti Movement: Comprehensive Overview</a>
+      <a href="https://vedicheritage.gov.in">vedicheritage.gov.in — Vedic and Agamic Heritage</a>
+      <a href="https://mahakota.com">mahakota.com — Temple Tradition and Cultural Heritage</a>
+    </div>
+
+    <div class="footnotes-section">
+      <h3>Scholarly Footnotes — D8-S2</h3>
+      <ol class="footnotes-list">
+        <li><span class="fn-num">[7]</span> On the medieval period as a creative era: Cultural and Religious Developments in Early Medieval India (600–1200 CE), AIMERS Cultural Heritage Series. The characterisation of medieval India as a period of creative flourishing (rather than stagnation) is now standard in post-colonial historiography.</li>
+        <li><span class="fn-num">[8]</span> Britannica: "Agama" — <a href="https://www.britannica.com/print/article/8697">britannica.com/print/article/8697</a>. The Agamas are post-Vedic texts conveying ritual knowledge; Shaivite Agamas date probably to the 8th century in their current form.</li>
+        <li><span class="fn-num">[9]</span> Dharma Renaissance Blog (2026): "Agamas in Hinduism: A Definitive Guide to Temple Science" — <a href="https://blog.dharma-renaissance.org/scriptures/agamas-in-hinduism-a-definitive-guide-to-temple-science-across-shaiva-vaishnava-shakta-paths/">dharma-renaissance.org</a>. The fourfold Agamic structure (jñāna, yoga, kriyā, caryā) is confirmed across multiple Agamic traditions.</li>
+        <li><span class="fn-num">[10]</span> BYJU's NCERT — Bhakti Movement Notes: <a href="https://byjus.com/free-ias-prep/bhakti-movement-ncert-notes/">byjus.com</a>. The 12 Alvars and 63 Nayanars are the canonical Tamil Bhakti figures; their poetry was institutionalised in Chola temple liturgy.</li>
+        <li><span class="fn-num">[11]</span> On temple architecture as cosmological diagram: this interpretation is standard in Agamic and art-historical scholarship. The Brihadeeswarar temple (1010 CE, Thanjavur) is a UNESCO World Heritage Site and the pre-eminent example of Agama-governed Chola architecture.</li>
+        <li><span class="fn-num">[12]</span> On Bhakti as cultural preservation response: Academia.edu — "Bhakti Movement in Early Medieval South India" — <a href="https://www.academia.edu/88040398">academia.edu/88040398</a>. The Bhakti movement's immunity to institutional destruction is a key argument in its historiography.</li>
+      </ol>
+    </div>
+
+  </div><!-- /article-body d8s2 -->
+
+  <!-- CROSS-DOMAIN NOTE -->
+  <div style="margin: 3rem 0; padding: 1.8rem 2rem; background: var(--ink); color: var(--parchment); border-radius: 3px;">
+    <div style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.18em; color:var(--gold); text-transform:uppercase; margin-bottom:0.8rem;">Cross-Domain Synthesis Notes · Pair 2</div>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:300; line-height:1.65; margin-bottom:0.8rem;">
+      The 107 Marma points (D7-S2) are mapped to the seven Chakras, which are in turn the architectural principle of the <em>garbhagriha</em> in Agamic temple science (D8-S2). The body and the temple are the same cosmological diagram at different scales — a homology that runs through the entire Grand Synthesis. The bija mantras assigned to each Chakra-Marma region connect directly to Domain 4 (Mantra Shastra) and Domain 1 (Sacred Geometry — yantras).
+    </p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.65rem; color:rgba(245,240,232,0.55); letter-spacing:0.05em;">
+      Cross-links: D1 (Sacred Geometry — yantra) · D2 (Natya Shastra — Karanas in temple sculpture) · D4 (Sound &amp; Vibration — bija mantras) · D5 (Consciousness — Chakra states)
+    </p>
+  </div>
+
+</div><!-- /page-wrap -->
+
+<footer>
+  <div class="footer-logo">culturalmusings</div>
+  <p style="margin-bottom:0.5rem;">Grand Synthesis · Domain 7·S2 &amp; Domain 8·S2 · Second Subdomain Pair</p>
+  <p><a href="https://www.culturalmusings.com">culturalmusings.com</a> &nbsp;·&nbsp; <a href="https://github.com/ramachandra1975">github.com/ramachandra1975</a></p>
+  <p style="margin-top:1rem; font-size:0.6rem; opacity:0.5;">Content is scholarly in intent. Gap annotations distinguish established knowledge from hypothesis. All references to external sources are linked where available.</p>
+</footer>
+
+</body>
+</html>
